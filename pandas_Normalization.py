@@ -10,8 +10,7 @@ print(df,"\n")
 scaler = MinMaxScaler()
 
 #MinMaxScaler로 데이터 변환
-scaler.fit(df)
-df_scaled = scaler.transform(df)
+df_scaled = scaler.fit_transform(df)
 
 #transform()을 하면 데이터가 numpy array로 변환이 되어 dataframe으로 변환
 df_df_scaled = pd.DataFrame(data=df_scaled, columns = list('ABC'))
